@@ -1,0 +1,24 @@
+        <form action="updated.php" method="post">
+            <!--Used form validation from source below!-->
+            <!--Title: Client-side form validation
+            Author: n.a.
+            Site owner/sponsor: mozilla.org
+            Date: n.a.
+            Code version: n.a.
+            Availability: https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation
+            Modified: no-->
+
+            <input type="hidden" name="ud_accountID" value="<?php echo $id; ?>">
+            Foreame: <input type="text" name="ud_forename" value="<?php if (isset($Fname)) echo $Fname; ?>"><br>
+            Surname: <input type="text" name="ud_surname" value="<?php if (isset($Sname))echo $Sname; ?>"><br>
+            Date of Birth: <input type="text" name="ud_DOB" max="2006-04-28" value="<?php if (isset($DOB)) echo $DOB; ?>"><br>
+            Phone Number: <input type="number" name="ud_phone" minlength="10" maxlength="10" value="<?php if (isset($phone))echo $phone; ?>"><br>
+            Email: <input type="email" name="ud_email" value="<?php if (isset($email)) echo $email; ?>"><br>
+            Postcode: <input type="text" name="ud_postcode" minlength="7" maxlength="7" value="<?php if (isset($postcode))echo $postcode; ?>"><br>
+            Balance: <input type="number" name="ud_balance" value="<?php if (isset($balance)) echo $balance; ?>"><br>
+
+
+            <input type="Submit" value="Update">
+        </form>
+    </body>
+</html>
